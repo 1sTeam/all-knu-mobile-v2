@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unstable-nested-components */
+
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Header from '../components/header/Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-type BottomNavigatorParamList = {
+export type BottomNavigatorParamList = {
   Home: undefined;
   User: undefined;
   Program: undefined;
@@ -40,8 +42,8 @@ const BottomNavigator = ({ tabs }: IBottomNavigatorProps) => {
             tabBarShowLabel: false,
             tabBarActiveTintColor: color,
             tabBarInactiveTintColor: '#828282',
-            tabBarIcon: ({ color }) => (
-              <Icon name={icon} color={color} size={28} />
+            tabBarIcon: ({ color: iconColor }) => (
+              <Icon name={icon} color={iconColor} size={28} />
             ),
           }}
         />

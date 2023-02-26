@@ -1,11 +1,19 @@
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { BottomNavigatorParamList } from '../navigation/BottomNavigator';
+import PageNavigator from '../navigation/PageNavigator';
+import { findTopTabMetaData } from '../utils/findTopTabMetaData';
+import { PageContainerStyle } from './styles';
 
-const Home = () => {
+const Home = ({
+  route,
+}: BottomTabScreenProps<BottomNavigatorParamList, 'Home'>) => {
+  const { name } = route;
+  const tabs = findTopTabMetaData(name);
   return (
-    <View>
-      <Text>Hello Home</Text>
-    </View>
+    <PageContainerStyle>
+      <PageNavigator tabs={tabs} />
+    </PageContainerStyle>
   );
 };
 
