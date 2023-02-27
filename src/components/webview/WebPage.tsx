@@ -1,11 +1,33 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 
-const WebPage = () => {
+import React from 'react';
+import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs';
+import WebView from 'react-native-webview';
+import useWebPageStatus from '../../hooks/useWebPageStatus';
+import ErrorPage from '../error/ErrorPage';
+import LoadingPage from '../loading/LoadingPage';
+
+const WebPage = ({ route }: MaterialTopTabScreenProps<any, any>) => {
+  //@ts-ignore
+  const { url: uri } = route.params;
+  const { isLoading, isError, onLoadProgress, onError } = useWebPageStatus();
+
   return (
-    <View>
-      <Text>Webview</Text>
-    </View>
+    <>
+      {isLoading ? <LoadingPage /> : null}
+      {isError ? (
+        <ErrorPage title="오류" description={isError.description} />
+      ) : null}
+      <WebView
+        style={{ backgroundColor: 'transparent' }}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        originWhitelist={['*']}
+        source={{ uri }}
+        onLoadProgress={onLoadProgress}
+        onError={onError}
+      />
+    </>
   );
 };
 

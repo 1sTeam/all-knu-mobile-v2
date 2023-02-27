@@ -3,4 +3,6 @@
   "compilerOptions": {
     "types": ["@types/styled-components-react-native"]
   },
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
 }

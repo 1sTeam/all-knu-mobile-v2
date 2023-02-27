@@ -1,6 +1,6 @@
 export default {
   Home: [
-    { name: 'main', korean: '메인', url: 'https://www.google.com' },
+    { name: 'main', korean: '메인', url: 'https://www.naver.com' },
     { name: 'announce', korean: '공지', url: 'https://www.google.com' },
     { name: 'timetable', korean: '시간표', url: 'https://www.google.com' },
     { name: 'maps', korean: '편의시설', url: 'https://www.google.com' },
@@ -16,6 +16,6 @@ export default {
     { name: 'satisfy', korean: '만족도 조사', url: 'https://www.google.com' },
     { name: 'subscribe', korean: '구독', url: 'https://www.google.com' },
   ],
-  Notice: [{ name: 'main', korean: '메인', url: null }],
+  Notice: [{ name: 'main', korean: '메인', url: 'x' }],
   Setting: [{ name: 'main', korean: '메인', url: null }],
 };

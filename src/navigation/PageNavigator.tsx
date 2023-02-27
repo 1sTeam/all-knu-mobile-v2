@@ -16,12 +16,12 @@ const PageNavi = createMaterialTopTabNavigator();
 const PageNavigator = ({ tabs }: IPageNavigatorProps) => {
   return (
     <PageNavi.Navigator tabBar={TabBar}>
-      {tabs.map(({ name, korean }) => (
+      {tabs.map(({ name, korean, url }) => (
         <PageNavi.Screen
           key={`page_tab_${name}`}
           name={name}
           component={WebPage}
-          initialParams={{ title: korean }}
+          initialParams={{ title: korean, url }}
         />
       ))}
     </PageNavi.Navigator>
