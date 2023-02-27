@@ -1,16 +1,23 @@
-import React from 'react';
-import BottomNavigator from './navigation/BottomNavigator';
-
-import bottomTabs from './meta/bottom_navigate_meta-data';
+import React, { Suspense } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import Login from './page/Login';
+import { RecoilRoot } from 'recoil';
+import { Text, View } from 'react-native';
+import StackNavigator from './navigation/StackNavigator';
 
 function App(): JSX.Element {
   return (
-    <NavigationContainer>
-      <Login />
-      {/* <BottomNavigator tabs={bottomTabs} /> */}
-    </NavigationContainer>
+    <RecoilRoot>
+      <NavigationContainer>
+        <Suspense
+          fallback={
+            <View>
+              <Text>Loading</Text>
+            </View>
+          }>
+          <StackNavigator />
+        </Suspense>
+      </NavigationContainer>
+    </RecoilRoot>
   );
 }
 

@@ -16,13 +16,25 @@ import {
   LoginVersionStyle,
   LoginVersionTextStyle,
 } from '../components/login/styles';
+import useAuth from '../hooks/useAuth';
 
 const Login = () => {
   const idRef = useRef<CustomTextInputType | null>(null);
   const pwdRef = useRef<CustomTextInputType | null>(null);
 
+  const { signIn } = useAuth();
+
   const onPress = () => {
-    console.log(idRef.current?.value, pwdRef.current?.value);
+    if (idRef.current && pwdRef.current) {
+      if (
+        idRef.current.value.trim() === '' ||
+        pwdRef.current.value.trim() === ''
+      ) {
+        console.log('아이디 또는 비밀번호 칸이 비워져 있습니다.');
+        return;
+      }
+      signIn(idRef.current?.value, pwdRef.current?.value);
+    }
   };
 
   return (

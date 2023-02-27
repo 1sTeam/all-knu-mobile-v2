@@ -4,6 +4,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Header from '../components/header/Header';
 import Icon from 'react-native-vector-icons/Ionicons';
+import bottomTabs from '../meta/bottom_navigate_meta-data';
 
 export type BottomNavigatorParamList = {
   Home: undefined;
@@ -13,19 +14,10 @@ export type BottomNavigatorParamList = {
   Setting: undefined;
 };
 
-interface IBottomNavigatorProps {
-  tabs: {
-    name: keyof BottomNavigatorParamList;
-    component: any;
-    korean: string;
-    color: string;
-    icon: string;
-  }[];
-}
-
 const BottomNav = createBottomTabNavigator<BottomNavigatorParamList>();
 
-const BottomNavigator = ({ tabs }: IBottomNavigatorProps) => {
+const BottomNavigator = () => {
+  const tabs = bottomTabs;
   return (
     <BottomNav.Navigator
       initialRouteName="Home"
