@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
 import Lottie from 'lottie-react-native';
 import lottieFile from '../../../public/lottie/loading-animation.json';
