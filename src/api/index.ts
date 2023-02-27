@@ -1,7 +1,8 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { IAuthState } from '../store/auth';
+import Config from 'react-native-config';
 
-const ENDPOINT = 'https://api.all-knu.accongbox.com';
+const ENDPOINT = Config.ENDPOINT;
 
 export const AllKnuAPI = axios.create({
   baseURL: ENDPOINT,

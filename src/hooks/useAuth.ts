@@ -23,8 +23,8 @@ const useAuth = () => {
     const { sessionInfo, studentInfo } = await login(id, password);
     if (sessionInfo && studentInfo) {
       setLoginInfo({ id, password });
-      setAuthorize(sessionInfo);
-      setUser(studentInfo);
+      setAuthorize({ sessionInfo });
+      setUser({ studentInfo });
     }
   };
 
@@ -38,8 +38,10 @@ const useAuth = () => {
   const refreshAuth = async () => {
     const { sessionInfo } = await refreshSession(loginInfo, authorize);
     if (sessionInfo) {
-      setAuthorize(sessionInfo);
+      setAuthorize({ sessionInfo });
+      return true;
     }
+    return false;
   };
 
   return { authorize, isAuthorized, signIn, signOut, refreshAuth };

@@ -1,6 +1,11 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
+project.ext.envConfigFiles = [
+        debug: ".env",
+        releasestaging: ".env.staging",
+        release: ".env.production"
+]
 import com.android.build.OutputFile
 
 /**
@@ -122,6 +127,10 @@ android {
         debug {
             signingConfig signingConfigs.debug
         }
+        releaseStaging {
+            initWith release
+            matchingFallbacks = ['release']
+        }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
@@ -170,3 +179,4 @@ dependencies {
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"

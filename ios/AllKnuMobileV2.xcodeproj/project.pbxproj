@@ -10,10 +10,10 @@
 		00E356F31AD99517003FC87E /* AllKnuMobileV2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AllKnuMobileV2Tests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5FE19945CDF630C68D4F16F6 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259F5D5666832FA02339C901 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */; };
-		661482F0C95ACDE881308724 /* libPods-AllKnuMobileV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BFDE08C4B74317C6F03C39 /* libPods-AllKnuMobileV2.a */; };
+		B04DC38945AC8F9A18ABEB82 /* libPods-AllKnuMobileV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78224E44169FB9D56D0C5FF1 /* libPods-AllKnuMobileV2.a */; };
 		DD3C004829AB3ABC0059D0AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DD3C004929AB3AC20059D0AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		E26A39A20492524235162E87 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7781914AB514C7FBE765FC0F /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +36,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AllKnuMobileV2/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AllKnuMobileV2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AllKnuMobileV2/main.m; sourceTree = "<group>"; };
-		259F5D5666832FA02339C901 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D247424F36AF31994CB4D4E /* Pods-AllKnuMobileV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2.debug.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2.debug.xcconfig"; sourceTree = "<group>"; };
+		5D1E932C4C34765A25915029 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7781914AB514C7FBE765FC0F /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78224E44169FB9D56D0C5FF1 /* libPods-AllKnuMobileV2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllKnuMobileV2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AllKnuMobileV2/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9BBABDBF80E48D650A6F58C9 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A7BFDE08C4B74317C6F03C39 /* libPods-AllKnuMobileV2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllKnuMobileV2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4FD298CA5C674DF27A1CCF8 /* Pods-AllKnuMobileV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2.release.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2.release.xcconfig"; sourceTree = "<group>"; };
+		C6EB0A68BD299138814C615A /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D25549537B2F79F39838A003 /* Pods-AllKnuMobileV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2.release.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2.release.xcconfig"; sourceTree = "<group>"; };
+		D44324F3ABA77AEC4AB2849C /* Pods-AllKnuMobileV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2.debug.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2.debug.xcconfig"; sourceTree = "<group>"; };
 		DD3C002529AA52420059D0AD /* AllKnuMobileV2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AllKnuMobileV2.entitlements; path = AllKnuMobileV2/AllKnuMobileV2.entitlements; sourceTree = "<group>"; };
 		DD3C002729AB335E0059D0AD /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		DD3C002829AB335E0059D0AD /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		DD3C003429AB335E0059D0AD /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		DD3C003529AB335E0059D0AD /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		DD3C003629AB335E0059D0AD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		E6BCB7D2F532C907891455A2 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig"; path = "Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FE19945CDF630C68D4F16F6 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a in Frameworks */,
+				E26A39A20492524235162E87 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661482F0C95ACDE881308724 /* libPods-AllKnuMobileV2.a in Frameworks */,
+				B04DC38945AC8F9A18ABEB82 /* libPods-AllKnuMobileV2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				A7BFDE08C4B74317C6F03C39 /* libPods-AllKnuMobileV2.a */,
-				259F5D5666832FA02339C901 /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */,
+				78224E44169FB9D56D0C5FF1 /* libPods-AllKnuMobileV2.a */,
+				7781914AB514C7FBE765FC0F /* libPods-AllKnuMobileV2-AllKnuMobileV2Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,10 +159,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D247424F36AF31994CB4D4E /* Pods-AllKnuMobileV2.debug.xcconfig */,
-				C4FD298CA5C674DF27A1CCF8 /* Pods-AllKnuMobileV2.release.xcconfig */,
-				E6BCB7D2F532C907891455A2 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */,
-				9BBABDBF80E48D650A6F58C9 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */,
+				D44324F3ABA77AEC4AB2849C /* Pods-AllKnuMobileV2.debug.xcconfig */,
+				D25549537B2F79F39838A003 /* Pods-AllKnuMobileV2.release.xcconfig */,
+				C6EB0A68BD299138814C615A /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */,
+				5D1E932C4C34765A25915029 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,12 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AllKnuMobileV2Tests" */;
 			buildPhases = (
-				99BE28F7F44D0D4F9DBACA67 /* [CP] Check Pods Manifest.lock */,
+				4E1C9915A2BFC9B0508F147C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				8E57C305FC0964C0FE2176AA /* [CP] Embed Pods Frameworks */,
-				0271121A2AE8811F7D85AA2C /* [CP] Copy Pods Resources */,
+				8AE49915773C763136F848B4 /* [CP] Embed Pods Frameworks */,
+				66CA098702C8A88485869F5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,15 +218,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AllKnuMobileV2" */;
 			buildPhases = (
-				974A2A392BFFC643E4239399 /* [CP] Check Pods Manifest.lock */,
+				594E2966B4FB44B2A08EEE83 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				DD3C004729AB3A6D0059D0AD /* Resources */,
-				4CB9D9C8B0EF42CB1E381A9C /* [CP] Embed Pods Frameworks */,
-				3AE12AD23C6DE5B6A7ED370B /* [CP] Copy Pods Resources */,
-				CC33661033E05BFB044638C3 /* [CP-User] [RNFB] Core Configuration */,
+				FE1E8E09B61FB16B525E277D /* [CP] Embed Pods Frameworks */,
+				AEC84D057474B1D2D87F6362 /* [CP] Copy Pods Resources */,
+				F57F1EB15C7EF2640F2904EB /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -309,97 +309,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		0271121A2AE8811F7D85AA2C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3AE12AD23C6DE5B6A7ED370B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4CB9D9C8B0EF42CB1E381A9C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E57C305FC0964C0FE2176AA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		974A2A392BFFC643E4239399 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AllKnuMobileV2-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99BE28F7F44D0D4F9DBACA67 /* [CP] Check Pods Manifest.lock */ = {
+		4E1C9915A2BFC9B0508F147C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,7 +331,80 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC33661033E05BFB044638C3 /* [CP-User] [RNFB] Core Configuration */ = {
+		594E2966B4FB44B2A08EEE83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllKnuMobileV2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CA098702C8A88485869F5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE49915773C763136F848B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2-AllKnuMobileV2Tests/Pods-AllKnuMobileV2-AllKnuMobileV2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEC84D057474B1D2D87F6362 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F57F1EB15C7EF2640F2904EB /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,6 +434,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE1E8E09B61FB16B525E277D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKnuMobileV2/Pods-AllKnuMobileV2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -486,7 +486,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6BCB7D2F532C907891455A2 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */;
+			baseConfigurationReference = C6EB0A68BD299138814C615A /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -513,7 +513,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BBABDBF80E48D650A6F58C9 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */;
+			baseConfigurationReference = 5D1E932C4C34765A25915029 /* Pods-AllKnuMobileV2-AllKnuMobileV2Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -537,7 +537,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D247424F36AF31994CB4D4E /* Pods-AllKnuMobileV2.debug.xcconfig */;
+			baseConfigurationReference = D44324F3ABA77AEC4AB2849C /* Pods-AllKnuMobileV2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -566,7 +566,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4FD298CA5C674DF27A1CCF8 /* Pods-AllKnuMobileV2.release.xcconfig */;
+			baseConfigurationReference = D25549537B2F79F39838A003 /* Pods-AllKnuMobileV2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
