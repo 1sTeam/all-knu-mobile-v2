@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import { encyrptedStorageEffect } from './auth';
+import { encyrptedStorageEffect } from '../utils/storage/encryptedStorageEffect';
 
 export interface ILoginInfoState {
   id: string;

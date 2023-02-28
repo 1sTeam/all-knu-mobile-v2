@@ -5,5 +5,6 @@
   },
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true,
-  "typeRoots": ["./types"]
+  "typeRoots": ["./types"],
+  "moduleResolution": "node"
 }

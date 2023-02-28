@@ -1,5 +1,5 @@
-import { atom, DefaultValue, AtomEffect } from 'recoil';
-import EncryptedStorage from 'react-native-encrypted-storage';
+import { atom } from 'recoil';
+import { encyrptedStorageEffect } from '../utils/storage/encryptedStorageEffect';
 
 export interface IAuthState {
   sessionInfo: {
@@ -8,22 +8,6 @@ export interface IAuthState {
     veriusCookies: any;
   };
 }
-
-export const encyrptedStorageEffect: <T>(key: string) => AtomEffect<T> =
-  key =>
-  ({ setSelf, onSet }) => {
-    setSelf(
-      EncryptedStorage.getItem(key).then(savedValue =>
-        savedValue != null ? JSON.parse(savedValue) : new DefaultValue(),
-      ),
-    );
-
-    onSet((newValue, _, isReset) => {
-      isReset
-        ? EncryptedStorage.removeItem(key)
-        : EncryptedStorage.setItem(key, JSON.stringify(newValue));
-    });
-  };
 
 export const authState = atom<IAuthState>({
   key: 'authState',

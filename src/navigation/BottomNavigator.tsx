@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Header from '../components/header/Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 import bottomTabs from '../meta/bottom_navigate_meta-data';
+import useNotificationController from '../hooks/useNotificationController';
 
 export type BottomNavigatorParamList = {
   Home: undefined;
@@ -17,6 +18,8 @@ export type BottomNavigatorParamList = {
 const BottomNav = createBottomTabNavigator<BottomNavigatorParamList>();
 
 const BottomNavigator = () => {
+  useNotificationController();
+
   const tabs = bottomTabs;
   return (
     <BottomNav.Navigator

@@ -26,10 +26,7 @@ const Login = () => {
 
   const onPress = () => {
     if (idRef.current && pwdRef.current) {
-      if (
-        idRef.current.value.trim() === '' ||
-        pwdRef.current.value.trim() === ''
-      ) {
+      if (idRef.current.value === '' || pwdRef.current.value === '') {
         console.log('아이디 또는 비밀번호 칸이 비워져 있습니다.');
         return;
       }
