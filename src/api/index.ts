@@ -10,6 +10,7 @@ export const AllKnuAPI = axios.create({
 });
 
 export const login = async (id: string, password: string) => {
+  console.log(ENDPOINT);
   try {
     const { data } = await axios({
       method: 'POST',

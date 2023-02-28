@@ -8,3 +8,7 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+-keep class com.allknumobile.BuildConfig { *; }
+-keep class com.allknumobile.dev.BuildConfig { *; }
+-keep class com.allknumobile.staging.BuildConfig { *; }

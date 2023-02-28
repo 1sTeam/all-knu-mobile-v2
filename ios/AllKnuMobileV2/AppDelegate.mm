@@ -1,4 +1,4 @@
-//#import <Firebase.h>
+#import <Firebase.h>
 #import "AppDelegate.h"
 //#import "RNFBMessagingModule.h"
 
@@ -10,11 +10,10 @@
 {
   self.moduleName = @"AllKnuMobileV2";
   
-//  if ([FIRApp defaultApp] == nil) {
-//      [FIRApp configure];
-//  }
+  if ([FIRApp defaultApp] == nil) {
+      [FIRApp configure];
+  }
 
-//  NSDictionary *appProperties = [RNFBMessagingModule addCustomPropsToUserProps:nil withLaunchOptions:launchOptions];
   
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

@@ -1,11 +1,18 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: "com.google.gms.google-services"
 
 project.ext.envConfigFiles = [
-        debug: ".env",
-        releasestaging: ".env.staging",
-        release: ".env.production"
+        dev: ".env.dev",
+        staging: ".env.staging",
+        prod: '.env.production'
 ]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+project.ext.react = [
+        enableHermes: false,
+]
+
 import com.android.build.OutputFile
 
 /**
@@ -98,13 +105,14 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.allknumobilev2"
+    namespace "com.allknumobile"
     defaultConfig {
-        applicationId "com.allknumobilev2"
+        applicationId "com.allknumobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        resValue "string", "build_config_package", "com.allknumobile"
     }
 
     splits {
@@ -123,6 +131,33 @@ android {
             keyPassword 'android'
         }
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            manifestPlaceholders = [appName: "@string/app_name_dev"]
+            applicationId "com.allknumobile.dev"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        staging {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            manifestPlaceholders = [appName: "@string/app_name_staging"]
+            applicationId "com.allknumobile.staging"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        prod {
+            dimension "default"
+            minSdkVersion rootProject.ext.minSdkVersion
+            manifestPlaceholders = [appName: "@string/app_name"]
+            applicationId "com.allknumobile"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+    }
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -163,6 +198,9 @@ dependencies {
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
 
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-messaging'
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
@@ -176,7 +214,9 @@ dependencies {
     }
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
+
+

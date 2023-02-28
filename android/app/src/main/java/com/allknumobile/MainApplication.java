@@ -1,4 +1,4 @@
-package com.allknumobilev2;
+package com.allknumobile;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

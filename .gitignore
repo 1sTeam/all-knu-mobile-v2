@@ -65,3 +65,10 @@ yarn-error.log
 # env
 .env
 .env.*
+
+# react-native-config
+/ios/tmp.xcconfig
+
+# google
+google-services.json
+GoogleService-Info.plist

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AllKnuMobileV2</string>
+    <string name="app_name_dev">AllKnuMobileV2 DEV</string>
+  <string name="app_name_stage">AllKnuMobileV2 STAGE</string>
 </resources>
