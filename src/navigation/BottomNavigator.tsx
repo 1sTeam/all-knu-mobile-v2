@@ -22,28 +22,30 @@ const BottomNavigator = () => {
 
   const tabs = bottomTabs;
   return (
-    <BottomNav.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        header: Header,
-      }}>
-      {tabs.map(({ name, component, color, korean, icon }) => (
-        <BottomNav.Screen
-          key={`bottom_tab_${name}`}
-          name={name}
-          component={component}
-          options={{
-            title: korean,
-            tabBarShowLabel: false,
-            tabBarActiveTintColor: color,
-            tabBarInactiveTintColor: '#828282',
-            tabBarIcon: ({ color: iconColor }) => (
-              <Icon name={icon} color={iconColor} size={28} />
-            ),
-          }}
-        />
-      ))}
-    </BottomNav.Navigator>
+    <>
+      <BottomNav.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          header: Header,
+        }}>
+        {tabs.map(({ name, component, color, korean, icon }) => (
+          <BottomNav.Screen
+            key={`bottom_tab_${name}`}
+            name={name}
+            component={component}
+            options={{
+              title: korean,
+              tabBarShowLabel: false,
+              tabBarActiveTintColor: color,
+              tabBarInactiveTintColor: '#828282',
+              tabBarIcon: ({ color: iconColor }) => (
+                <Icon name={icon} color={iconColor} size={28} />
+              ),
+            }}
+          />
+        ))}
+      </BottomNav.Navigator>
+    </>
   );
 };
 

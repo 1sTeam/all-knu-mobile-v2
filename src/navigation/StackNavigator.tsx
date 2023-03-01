@@ -5,11 +5,21 @@ import Login from '../page/Login';
 import BottomNavigator from './BottomNavigator';
 import useInterceptor from '../hooks/useInterceptor';
 import { topicNotificationHandler } from '../utils/messaging/topicNotificationHandler';
+import Modal from '../components/modal/Modal';
+import Dialog from '../components/dialog/Dialog';
+import { DialogImagesName } from '../components/dialog/DialogBody';
+import ExternalWebPage from '../components/webview/ExternalWebPage';
 
 export type StackNavigatorParamList = {
   Login: undefined;
   Main: undefined;
-  ExternalWebPage: undefined;
+  ExternalWebPage: { uri: string };
+  Modal: undefined;
+  Dialog: {
+    header?: string;
+    body: { image: DialogImagesName; title: string };
+    footer: { onPress: () => void; title: string }[];
+  };
 };
 
 const StackNav = createStackNavigator<StackNavigatorParamList>();
@@ -25,7 +35,17 @@ const StackNavigator = () => {
   return (
     <StackNav.Navigator screenOptions={{ headerShown: false }}>
       {isAuthorized ? (
-        <StackNav.Screen name="Main" component={BottomNavigator} />
+        <>
+          <StackNav.Screen name="Main" component={BottomNavigator} />
+          <StackNav.Group screenOptions={{ presentation: 'transparentModal' }}>
+            <StackNav.Screen name="Modal" component={Modal} />
+            <StackNav.Screen name="Dialog" component={Dialog} />
+            <StackNav.Screen
+              name="ExternalWebPage"
+              component={ExternalWebPage}
+            />
+          </StackNav.Group>
+        </>
       ) : (
         <StackNav.Screen
           name="Login"
