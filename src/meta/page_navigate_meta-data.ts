@@ -16,6 +16,10 @@ export default {
     { name: 'satisfy', korean: '만족도 조사', url: 'https://www.google.com' },
     { name: 'subscribe', korean: '구독', url: 'https://www.google.com' },
   ],
-  Notice: [{ name: 'main', korean: '메인', url: 'x' }],
-  Setting: [{ name: 'main', korean: '메인', url: null }],
+  Notice: [
+    { name: 'main', korean: '메인', url: null, componentName: 'Notifications' },
+  ],
+  Setting: [
+    { name: 'main', korean: '메인', url: null, componentName: 'SettingScreen' },
+  ],
 };

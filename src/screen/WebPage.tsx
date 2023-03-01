@@ -3,9 +3,9 @@
 import React from 'react';
 import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs';
 import WebView from 'react-native-webview';
-import useWebPageStatus from '../../hooks/useWebPageStatus';
-import ErrorPage from '../error/ErrorPage';
-import LoadingPage from '../loading/LoadingPage';
+import useWebPageStatus from '../hooks/useWebPageStatus';
+import ErrorPage from '../components/error/ErrorPage';
+import LoadingPage from '../components/loading/LoadingPage';
 
 const WebPage = ({ route }: MaterialTopTabScreenProps<any, any>) => {
   //@ts-ignore

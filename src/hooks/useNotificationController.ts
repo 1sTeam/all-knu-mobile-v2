@@ -23,8 +23,10 @@ const useNotificationController = () => {
   const listenerWithoutFeedback = (
     remoteMessage: FirebaseMessagingTypes.RemoteMessage | null,
   ) => {
-    foreNotificationHandler(remoteMessage!);
-    newReceviedNotification();
+    if (remoteMessage) {
+      foreNotificationHandler(remoteMessage);
+      newReceviedNotification();
+    }
   };
 
   useEffect(() => {
