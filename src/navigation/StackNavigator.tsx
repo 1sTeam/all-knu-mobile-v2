@@ -25,15 +25,17 @@ export type StackNavigatorParamList = {
 const StackNav = createStackNavigator<StackNavigatorParamList>();
 
 const StackNavigator = () => {
-  useInterceptor();
   const { isAuthorized } = useAuth();
 
+  useInterceptor();
   useEffect(() => {
     topicNotificationHandler('SUBSCRIBE', 'INSTALLER');
   }, []);
 
   return (
-    <StackNav.Navigator screenOptions={{ headerShown: false }}>
+    <StackNav.Navigator
+      initialRouteName="Main"
+      screenOptions={{ headerShown: false }}>
       {isAuthorized ? (
         <>
           <StackNav.Screen name="Main" component={BottomNavigator} />

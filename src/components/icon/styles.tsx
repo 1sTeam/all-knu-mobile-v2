@@ -4,7 +4,13 @@ interface IIconStyleProps {
   size: number;
 }
 
-export const IconStyle = styled.View<IIconStyleProps>`
+export const IconStyle = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+`;
+
+export const IconContainerStyle = styled.View<IIconStyleProps>`
   ${({ size }) => `width: ${size}px; height: ${size}px`};
   border-radius: ${({ size }) => `${size}px`};
   justify-content: center;

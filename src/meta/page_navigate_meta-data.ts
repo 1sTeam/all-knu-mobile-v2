@@ -1,6 +1,10 @@
 export default {
   Home: [
-    { name: 'main', korean: '메인', url: 'https://www.naver.com' },
+    {
+      name: 'main',
+      korean: '메인',
+      url: 'http://localhost:3000',
+    },
     { name: 'announce', korean: '공지', url: 'https://www.google.com' },
     { name: 'timetable', korean: '시간표', url: 'https://www.google.com' },
     { name: 'maps', korean: '편의시설', url: 'https://www.google.com' },

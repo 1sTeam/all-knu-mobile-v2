@@ -12,7 +12,7 @@ export const ExternalContainerStyle = styled.View`
 export const ExternalStyle = styled(Animated.View)`
   width: 100%;
   height: 90%;
-  background-color: white;
+  background-color: ${({ theme }) => theme.background.primary};
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 `;
@@ -27,7 +27,8 @@ export const ExternalHeaderStyle = styled.View`
   border-top-right-radius: 16px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: lightgray;
+  background-color: ${({ theme }) => theme.background.secondary};
+  border-bottom-color: ${({ theme }) => theme.background.secondary};
 `;
 
 export const ExternalHeaderTitleStyle = styled.View`
@@ -37,6 +38,6 @@ export const ExternalHeaderTitleStyle = styled.View`
 `;
 
 export const ExternalHeaderTextStyle = styled.Text`
-  color: black;
+  color: ${({ theme }) => theme.text.primary};
   font-size: 12px;
 `;

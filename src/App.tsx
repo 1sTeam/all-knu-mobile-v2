@@ -1,23 +1,20 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import { ThemeProvider } from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
-import { RecoilRoot } from 'recoil';
-import { Text, View } from 'react-native';
 import StackNavigator from './navigation/StackNavigator';
+import useUserDeviceSetting from './hooks/useUserDeviceSetting';
+import { darkTheme, lightTheme } from './styles/theme';
 
 function App(): JSX.Element {
+  const { isDarkMode } = useUserDeviceSetting();
+  const theme = isDarkMode ? darkTheme : lightTheme;
+
   return (
-    <RecoilRoot>
-      <NavigationContainer>
-        <Suspense
-          fallback={
-            <View>
-              <Text>Loading</Text>
-            </View>
-          }>
-          <StackNavigator />
-        </Suspense>
+    <ThemeProvider theme={theme}>
+      <NavigationContainer theme={theme.navigation}>
+        <StackNavigator />
       </NavigationContainer>
-    </RecoilRoot>
+    </ThemeProvider>
   );
 }
 
