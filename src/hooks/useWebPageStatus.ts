@@ -27,6 +27,8 @@ const useWebPageStatus = () => {
       case 401:
         setIsError({ code, description: '페이지 인증에 문제가 생겼습니다.' });
         break;
+      case 404:
+        setIsError({ code, description: '해당 페이지를 찾을 수 없습니다.' });
       default:
         setIsError({ code, description: '알 수 없는 오류가 생겼습니다.' });
         break;

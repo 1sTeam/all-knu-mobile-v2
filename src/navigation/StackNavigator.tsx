@@ -9,12 +9,13 @@ import Modal from '../components/modal/Modal';
 import Dialog from '../components/dialog/Dialog';
 import { DialogImagesName } from '../components/dialog/DialogBody';
 import ExternalWebPage from '../components/webview/ExternalWebPage';
+import { DynamicModalProps } from '../components/dynamic/DynamicModal';
 
 export type StackNavigatorParamList = {
   Login: undefined;
   Main: undefined;
   ExternalWebPage: { uri: string };
-  Modal: undefined;
+  Modal: { size: 'sm' | 'md'; type: DynamicModalProps['type']; data: any };
   Dialog: {
     header?: string;
     body: { image: DialogImagesName; title: string };

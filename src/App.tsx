@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import StackNavigator from './navigation/StackNavigator';
 import useUserDeviceSetting from './hooks/useUserDeviceSetting';
 import { darkTheme, lightTheme } from './styles/theme';
+import { navigationRef } from './utils/RootNavigation';
 
 function App(): JSX.Element {
   const { isDarkMode } = useUserDeviceSetting();
@@ -11,7 +12,7 @@ function App(): JSX.Element {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer theme={theme.navigation}>
+      <NavigationContainer ref={navigationRef} theme={theme.navigation}>
         <StackNavigator />
       </NavigationContainer>
     </ThemeProvider>

@@ -38,6 +38,10 @@ export const ExternalHeaderTitleStyle = styled.View`
 `;
 
 export const ExternalHeaderTextStyle = styled.Text`
+  width: 80%;
+  height: 14px;
   color: ${({ theme }) => theme.text.primary};
+  text-align: center;
+  text-overflow: clip;
   font-size: 12px;
 `;

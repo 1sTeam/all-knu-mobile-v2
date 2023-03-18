@@ -1,16 +1,21 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
-import { Text, TouchableWithoutFeedback } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native';
 import { StackNavigatorParamList } from '../../navigation/StackNavigator';
-import { DEFAULT_SLIDE_UP_INTERPOLATE } from '../../utils/animation/interpolateData';
+import {
+  DEFAULT_SLIDE_UP_INTERPOLATE,
+  SMALL_SLIDE_UP_INTERPOLATE,
+} from '../../utils/animation/interpolateData';
 import useAnimation from '../../utils/animation/useAnimation';
-import Button from '../button/Button';
+import DynamicModal from '../dynamic/DynamicModal';
 import { ModalContainerStyle, ModalStyle } from './styles';
 
 const Modal = ({
+  route,
   navigation,
 }: StackScreenProps<StackNavigatorParamList, 'Modal'>) => {
-  const { animation, endAnimation } = useAnimation(0, 1);
+  const { size, type, data } = route.params;
+  const { animation, endAnimation } = useAnimation(0, 1, 100);
 
   const exitModal = () => {
     endAnimation();
@@ -22,17 +27,19 @@ const Modal = ({
       <ModalContainerStyle>
         <TouchableWithoutFeedback>
           <ModalStyle
+            size={size}
             style={{
               transform: [
                 {
                   translateY: animation.interpolate(
-                    DEFAULT_SLIDE_UP_INTERPOLATE,
+                    size === 'sm'
+                      ? SMALL_SLIDE_UP_INTERPOLATE
+                      : DEFAULT_SLIDE_UP_INTERPOLATE,
                   ),
                 },
               ],
             }}>
-            <Text style={{ fontSize: 30 }}>This is a modal!</Text>
-            <Button onPress={exitModal} title="Dismiss" />
+            <DynamicModal data={data} type={type} exitModal={exitModal} />
           </ModalStyle>
         </TouchableWithoutFeedback>
       </ModalContainerStyle>

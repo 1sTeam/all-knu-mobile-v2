@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 import { useEffect, useRef, useState } from 'react';
 import WebView from 'react-native-webview';
 import { useRecoilValue } from 'recoil';
@@ -20,7 +20,11 @@ const useWebViewInteraction = () => {
   const { isDarkMode } = useUserDeviceSetting();
   const student = useRecoilValue(studentState);
   const injectedJavaScript = `
-  (function() { window.ReactNativeWebView.postMessage(JSON.stringify({ type: "status", action: "ready", message: "webview has been activated! Ready for connection with app."}));})();true;`;
+  (function() { 
+    setTimeout(() => {
+      window.ReactNativeWebView.postMessage(JSON.stringify({ type: "status", action: "ready", message: "webview has been activated! Ready for connection with app."}));
+    }, 1000)
+  })();true;`;
 
   useEffect(() => {
     if (command !== '') {
@@ -35,7 +39,10 @@ const useWebViewInteraction = () => {
           navigation.navigate('Dialog');
           break;
         case 'modal':
-          navigation.navigate('Modal');
+          navigation.navigate('Modal', message);
+          break;
+        case 'website':
+          navigation.navigate('ExternalWebPage', message);
           break;
         case 'navigate':
           navigation.navigate(message.name, message.params);
@@ -50,10 +57,9 @@ const useWebViewInteraction = () => {
       }
 
       if (temp.key !== '') {
-        console.log('sended');
         ref.current?.postMessage(rnMessageConverter(temp.key, temp.data));
-        resetMessage();
       }
+      resetMessage();
     }
   }, [command]);
 

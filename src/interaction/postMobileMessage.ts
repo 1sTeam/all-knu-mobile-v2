@@ -55,5 +55,6 @@ export const rnMessageConverter = (key: string, bringCurrentData: any) => {
       break;
   }
 
+  console.log(JSON.stringify(result.message));
   return JSON.stringify(result);
 };
