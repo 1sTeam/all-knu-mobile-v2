@@ -1,4 +1,4 @@
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { useEffect, useRef, useState } from 'react';
 import WebView from 'react-native-webview';
 import { useRecoilValue } from 'recoil';
@@ -25,6 +25,10 @@ const useWebViewInteraction = () => {
       window.ReactNativeWebView.postMessage(JSON.stringify({ type: "status", action: "ready", message: "webview has been activated! Ready for connection with app."}));
     }, 1000)
   })();true;`;
+
+  const refreshWebView = () => {
+    ref.current?.reload();
+  };
 
   useEffect(() => {
     if (command !== '') {
@@ -63,7 +67,13 @@ const useWebViewInteraction = () => {
     }
   }, [command]);
 
-  return { webRef: ref, injectedJavaScript, newMessage, resetMessage };
+  return {
+    webRef: ref,
+    injectedJavaScript,
+    newMessage,
+    resetMessage,
+    refreshWebView,
+  };
 };
 
 export default useWebViewInteraction;

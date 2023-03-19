@@ -1,4 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
+import { RefreshControl, ScrollView } from 'react-native';
 import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs';
 import WebView from 'react-native-webview';
 import useWebPageStatus from '../hooks/useWebPageStatus';
@@ -11,10 +14,15 @@ const WebPage = ({ route }: MaterialTopTabScreenProps<any, any>) => {
   //@ts-ignore
   const { url: uri } = route.params;
   const { isLoading, isError, onLoadProgress, onError } = useWebPageStatus();
-  const { webRef, injectedJavaScript, newMessage } = useWebViewInteraction();
+  const { webRef, injectedJavaScript, newMessage, refreshWebView } =
+    useWebViewInteraction();
 
   return (
-    <>
+    <ScrollView
+      contentContainerStyle={{ width: '100%', height: '100%' }}
+      refreshControl={
+        <RefreshControl refreshing={isLoading} onRefresh={refreshWebView} />
+      }>
       {isLoading ? <LoadingPage /> : null}
       {isError ? (
         <ErrorPage title="오류" description={isError.description} />
@@ -32,7 +40,7 @@ const WebPage = ({ route }: MaterialTopTabScreenProps<any, any>) => {
         injectedJavaScript={injectedJavaScript}
         onMessage={e => onMiddleInteraction(e, newMessage)}
       />
-    </>
+    </ScrollView>
   );
 };
 
